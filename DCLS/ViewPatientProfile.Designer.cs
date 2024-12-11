@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewPatientProfile));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -49,16 +50,23 @@
             this.label9 = new System.Windows.Forms.Label();
             this.ageLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.patientHistoryDataGridView = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.patientHistoryDataGridView = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.refreshButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.Add = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.patientIdNumber = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.patientHistoryDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.flowLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -70,6 +78,16 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(775, 76);
             this.flowLayoutPanel1.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DCLS.Properties.Resources.tooth;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(123, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -271,24 +289,19 @@
             this.flowLayoutPanel4.Size = new System.Drawing.Size(180, 37);
             this.flowLayoutPanel4.TabIndex = 7;
             // 
-            // patientHistoryDataGridView
+            // button3
             // 
-            this.patientHistoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.patientHistoryDataGridView.Location = new System.Drawing.Point(14, 253);
-            this.patientHistoryDataGridView.Name = "patientHistoryDataGridView";
-            this.patientHistoryDataGridView.RowHeadersWidth = 62;
-            this.patientHistoryDataGridView.Size = new System.Drawing.Size(764, 317);
-            this.patientHistoryDataGridView.TabIndex = 9;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DCLS.Properties.Resources.tooth;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(123, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.button3.BackgroundImage = global::DCLS.Properties.Resources.save;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Enabled = false;
+            this.button3.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.button3.Location = new System.Drawing.Point(149, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(28, 28);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "\r\n";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -302,25 +315,111 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // patientHistoryDataGridView
             // 
-            this.button3.BackgroundImage = global::DCLS.Properties.Resources.save;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.button3.Location = new System.Drawing.Point(149, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(28, 28);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "\r\n";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.patientHistoryDataGridView.AllowUserToAddRows = false;
+            this.patientHistoryDataGridView.AllowUserToDeleteRows = false;
+            this.patientHistoryDataGridView.AllowUserToResizeColumns = false;
+            this.patientHistoryDataGridView.AllowUserToResizeRows = false;
+            this.patientHistoryDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.patientHistoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.patientHistoryDataGridView.Location = new System.Drawing.Point(14, 285);
+            this.patientHistoryDataGridView.MultiSelect = false;
+            this.patientHistoryDataGridView.Name = "patientHistoryDataGridView";
+            this.patientHistoryDataGridView.ReadOnly = true;
+            this.patientHistoryDataGridView.RowHeadersWidth = 62;
+            this.patientHistoryDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.patientHistoryDataGridView.Size = new System.Drawing.Size(772, 285);
+            this.patientHistoryDataGridView.TabIndex = 9;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(16, 238);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(282, 44);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "History";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.Controls.Add(this.refreshButton);
+            this.flowLayoutPanel5.Controls.Add(this.deleteButton);
+            this.flowLayoutPanel5.Controls.Add(this.Add);
+            this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(534, 245);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(255, 37);
+            this.flowLayoutPanel5.TabIndex = 11;
+            // 
+            // refreshButton
+            // 
+            this.refreshButton.BackgroundImage = global::DCLS.Properties.Resources.refresh1;
+            this.refreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.refreshButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.refreshButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.refreshButton.Location = new System.Drawing.Point(224, 3);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(28, 28);
+            this.refreshButton.TabIndex = 3;
+            this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.BackgroundImage = global::DCLS.Properties.Resources.delete;
+            this.deleteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.deleteButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.deleteButton.Location = new System.Drawing.Point(190, 3);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(28, 28);
+            this.deleteButton.TabIndex = 2;
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // Add
+            // 
+            this.Add.BackgroundImage = global::DCLS.Properties.Resources.plus;
+            this.Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Add.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.Add.Location = new System.Drawing.Point(156, 3);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(28, 28);
+            this.Add.TabIndex = 4;
+            this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.label11.Location = new System.Drawing.Point(19, 105);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(120, 26);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Patient Id:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // patientIdNumber
+            // 
+            this.patientIdNumber.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.patientIdNumber.Location = new System.Drawing.Point(145, 105);
+            this.patientIdNumber.Name = "patientIdNumber";
+            this.patientIdNumber.Size = new System.Drawing.Size(120, 26);
+            this.patientIdNumber.TabIndex = 0;
+            this.patientIdNumber.Text = "0";
+            this.patientIdNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ViewPatientProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(793, 584);
+            this.ClientSize = new System.Drawing.Size(801, 584);
+            this.Controls.Add(this.patientIdNumber);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.flowLayoutPanel5);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.patientHistoryDataGridView);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel3);
@@ -334,13 +433,14 @@
             this.Text = "Urban Smiles Dental Clinic";
             this.Load += new System.EventHandler(this.ViewPatientProfile_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
             this.flowLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.patientHistoryDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.flowLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -371,5 +471,12 @@
         private System.Windows.Forms.DataGridView patientHistoryDataGridView;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label ageLabel;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
+        private System.Windows.Forms.Button refreshButton;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label patientIdNumber;
     }
 }

@@ -57,10 +57,6 @@ namespace DCLS
             {
                 MessageBox.Show("No row selected. Please select a row.", "Error");
             }
-
-
-           
-
            
         }
 
@@ -89,6 +85,40 @@ namespace DCLS
 
             var Window = new NewPatient();
             Window.ShowDialog();
+
+
+        }
+
+        private void Button_Entry_Search_Click(object sender, EventArgs e)
+        {
+
+
+            int comboBoxIndex = filterSearchComboBox.SelectedIndex;
+
+            switch (comboBoxIndex) { 
+            
+                case 0:
+                    // First Name
+                    AccessDatabase findFirstName = new AccessDatabase(DatabaseQueries.searchByFirstName(patientSearchTextBox.Text));
+                    searchPatientDataGridView.DataSource = findFirstName.executeDatabaseQuery();
+                    break;
+                case 1:
+                    // Last Name
+                    AccessDatabase findLastName = new AccessDatabase(DatabaseQueries.searchByLastName(patientSearchTextBox.Text));
+                    searchPatientDataGridView.DataSource = findLastName.executeDatabaseQuery();
+                    break;
+                case 2:
+                    // Id
+                    AccessDatabase findId = new AccessDatabase(DatabaseQueries.searchById(patientSearchTextBox.Text));
+                    searchPatientDataGridView.DataSource = findId.executeDatabaseQuery();
+                    break;
+                case 3:
+                    // Gender
+                    AccessDatabase findGender = new AccessDatabase(DatabaseQueries.searchByGender(patientSearchTextBox.Text));
+                    searchPatientDataGridView.DataSource = findGender.executeDatabaseQuery();
+                    break;
+
+            }
 
 
         }

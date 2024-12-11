@@ -140,6 +140,12 @@
     <Compile Include="ViewPatientProfile.Designer.cs">
       <DependentUpon>ViewPatientProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewPatientProfile_Delete_Confirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPatientProfile_Delete_Confirmation.Designer.cs">
+      <DependentUpon>ViewPatientProfile_Delete_Confirmation.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="InitialScreen.resx">
       <DependentUpon>InitialScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewPatientProfile.resx">
       <DependentUpon>ViewPatientProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPatientProfile_Delete_Confirmation.resx">
+      <DependentUpon>ViewPatientProfile_Delete_Confirmation.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

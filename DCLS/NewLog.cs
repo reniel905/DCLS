@@ -19,7 +19,17 @@ namespace DCLS
 
         private void Button_AddToLog_Click(object sender, EventArgs e)
         {
+
+            int id = Convert.ToInt32(idNumberTextBox.Text);
+            string date = logDateTimePicker.Value.ToString("MM-dd-yyyy");
+            string procedure = procedureComboBox.Text;
+
+
+            AccessDatabase addNewLog = new AccessDatabase(DatabaseQueries.addLog(id, date, procedure));
+            addNewLog.executeDatabaseQuery();
             this.Close();
         }
+
+     
     }
 }

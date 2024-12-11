@@ -38,12 +38,13 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Button_AddLog = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.refreshButton = new System.Windows.Forms.Button();
+            this.patientLogsDataGridView = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientLogsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -68,7 +69,7 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(132, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(342, 76);
@@ -100,23 +101,31 @@
             this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
             this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 31);
+            this.label7.Size = new System.Drawing.Size(92, 31);
             this.label7.TabIndex = 8;
-            this.label7.Text = "Filter by:";
+            this.label7.Text = "Procedure:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // comboBox1
             // 
+            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            "Extraction",
+            "Filling",
+            "Adjustment",
+            "Cleaning"});
             this.comboBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Date",
-            "Procedure",
-            "Name"});
-            this.comboBox1.Location = new System.Drawing.Point(80, 3);
+            "All",
+            "Extraction",
+            "Filling",
+            "Adjustment",
+            "Cleaning"});
+            this.comboBox1.Location = new System.Drawing.Point(101, 3);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(241, 28);
             this.comboBox1.TabIndex = 9;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // Button_AddLog
             // 
@@ -132,19 +141,40 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.Button_AddLog);
+            this.flowLayoutPanel2.Controls.Add(this.refreshButton);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(435, 94);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(353, 37);
             this.flowLayoutPanel2.TabIndex = 10;
             // 
-            // dataGridView1
+            // refreshButton
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 147);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(775, 317);
-            this.dataGridView1.TabIndex = 11;
+            this.refreshButton.BackgroundImage = global::DCLS.Properties.Resources.refresh1;
+            this.refreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.refreshButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.refreshButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.refreshButton.Location = new System.Drawing.Point(197, 3);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(28, 28);
+            this.refreshButton.TabIndex = 4;
+            this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
+            // 
+            // patientLogsDataGridView
+            // 
+            this.patientLogsDataGridView.AllowUserToAddRows = false;
+            this.patientLogsDataGridView.AllowUserToDeleteRows = false;
+            this.patientLogsDataGridView.AllowUserToResizeColumns = false;
+            this.patientLogsDataGridView.AllowUserToResizeRows = false;
+            this.patientLogsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.patientLogsDataGridView.Location = new System.Drawing.Point(13, 147);
+            this.patientLogsDataGridView.MultiSelect = false;
+            this.patientLogsDataGridView.Name = "patientLogsDataGridView";
+            this.patientLogsDataGridView.ReadOnly = true;
+            this.patientLogsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.patientLogsDataGridView.Size = new System.Drawing.Size(775, 317);
+            this.patientLogsDataGridView.TabIndex = 11;
             // 
             // ViewLog
             // 
@@ -152,7 +182,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 479);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.patientLogsDataGridView);
             this.Controls.Add(this.flowLayoutPanel4);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel2);
@@ -162,14 +192,17 @@
             this.Name = "ViewLog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Urban Smiles Dental Clinic";
+            this.Load += new System.EventHandler(this.ViewLog_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientLogsDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
+
+        
 
         #endregion
 
@@ -182,6 +215,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView patientLogsDataGridView;
+        private System.Windows.Forms.Button refreshButton;
     }
 }

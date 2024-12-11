@@ -19,14 +19,18 @@ namespace DCLS
 
         private void Button_Patient_New_Click(object sender, EventArgs e)
         {
+            Close();
             var Window = new NewPatient();
             Window.ShowDialog();
         }
 
         private void Button_Patient_Old_Click(object sender, EventArgs e)
         {
+
+            Close();
             var Window = new NewLog();
             Window.ShowDialog();
+
         }
     }
 }

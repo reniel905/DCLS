@@ -40,7 +40,7 @@
             // 
             this.flowLayoutPanel3.Controls.Add(this.Button_Close);
             this.flowLayoutPanel3.Controls.Add(this.Button_ConfirmDeletion);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(106, 56);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(101, 90);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(169, 39);
             this.flowLayoutPanel3.TabIndex = 9;
@@ -69,10 +69,10 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(22, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(332, 32);
+            this.label1.Size = new System.Drawing.Size(332, 66);
             this.label1.TabIndex = 8;
             this.label1.Text = "Are you sure you want to delete this item?";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -82,7 +82,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(372, 119);
+            this.ClientSize = new System.Drawing.Size(372, 141);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

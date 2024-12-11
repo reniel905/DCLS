@@ -22,5 +22,40 @@ namespace DCLS
             var Window = new NewLog_Type();
             Window.ShowDialog();
         }
+
+        private void ViewLog_Load(object sender, EventArgs e)
+        {
+            loadLogs();
+        }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            loadLogs();
+        }
+
+        private void loadLogs()
+        {
+
+            AccessDatabase displayLogs = new AccessDatabase(DatabaseQueries.GetAllLogsWithName);
+            patientLogsDataGridView.DataSource = displayLogs.executeDatabaseQuery();
+
+        }
+        private void ComboBox1_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+
+
+            if (comboBox1.Text.Equals("All")) {
+
+                loadLogs();
+
+            }
+            else
+            {
+
+                AccessDatabase viewAllExtraction = new AccessDatabase(DatabaseQueries.filterLogBy(comboBox1.Text));
+                patientLogsDataGridView.DataSource = viewAllExtraction.executeDatabaseQuery();
+
+            }
+        }
     }
 }

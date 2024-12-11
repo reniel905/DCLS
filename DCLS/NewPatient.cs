@@ -52,12 +52,15 @@ namespace DCLS
             else
             {
                 AccessDatabase addNewPatient = new AccessDatabase(DatabaseQueries.addPatient(firstName, lastName, middleInitial, gender, birthday, contact));
-                addNewPatient.executeDatabaseQuery();
+                DataTable id = addNewPatient.executeDatabaseQuery();
+
+                string newCustomerId = id.Rows[0]["NewID"].ToString();
 
                 // should return the current id has been created.
 
-                var Window = new NewPatient_Completion();
+                var Window = new NewPatient_Completion(newCustomerId);
                 Window.ShowDialog();
+                Close();
             }      
         }
     }

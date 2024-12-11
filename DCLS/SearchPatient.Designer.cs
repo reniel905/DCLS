@@ -33,23 +33,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchPatient));
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.filterSearchComboBox = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.patientSearchTextBox = new System.Windows.Forms.TextBox();
+            this.Button_Entry_Search = new System.Windows.Forms.Button();
             this.searchPatientDataGridView = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.refreshButton = new System.Windows.Forms.Button();
             this.Button_Entry_Delete = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.Button_Entry_Load = new System.Windows.Forms.Button();
-            this.Button_Entry_Search = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchPatientDataGridView)).BeginInit();
             this.flowLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -72,6 +72,16 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(775, 76);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DCLS.Properties.Resources.tooth;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(123, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -85,7 +95,7 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.filterSearchComboBox);
-            this.flowLayoutPanel2.Controls.Add(this.textBox1);
+            this.flowLayoutPanel2.Controls.Add(this.patientSearchTextBox);
             this.flowLayoutPanel2.Controls.Add(this.Button_Entry_Search);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(13, 105);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -94,13 +104,17 @@
             // 
             // filterSearchComboBox
             // 
+            this.filterSearchComboBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "Id",
+            "First Name",
+            "Last Name",
+            "Gender"});
             this.filterSearchComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filterSearchComboBox.FormattingEnabled = true;
             this.filterSearchComboBox.Items.AddRange(new object[] {
             "First Name",
             "Last Name",
             "Id",
-            "Birthday",
             "Gender"});
             this.filterSearchComboBox.Location = new System.Drawing.Point(2, 2);
             this.filterSearchComboBox.Margin = new System.Windows.Forms.Padding(2);
@@ -109,21 +123,35 @@
             this.filterSearchComboBox.TabIndex = 2;
             this.filterSearchComboBox.Text = "Filter by";
             // 
-            // textBox1
+            // patientSearchTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(132, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 26);
-            this.textBox1.TabIndex = 0;
+            this.patientSearchTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientSearchTextBox.Location = new System.Drawing.Point(132, 3);
+            this.patientSearchTextBox.Name = "patientSearchTextBox";
+            this.patientSearchTextBox.Size = new System.Drawing.Size(245, 26);
+            this.patientSearchTextBox.TabIndex = 0;
+            // 
+            // Button_Entry_Search
+            // 
+            this.Button_Entry_Search.BackgroundImage = global::DCLS.Properties.Resources.search;
+            this.Button_Entry_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Button_Entry_Search.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.Button_Entry_Search.Location = new System.Drawing.Point(383, 3);
+            this.Button_Entry_Search.Name = "Button_Entry_Search";
+            this.Button_Entry_Search.Size = new System.Drawing.Size(28, 28);
+            this.Button_Entry_Search.TabIndex = 1;
+            this.Button_Entry_Search.UseVisualStyleBackColor = true;
+            this.Button_Entry_Search.Click += new System.EventHandler(this.Button_Entry_Search_Click);
             // 
             // searchPatientDataGridView
             // 
             this.searchPatientDataGridView.AllowUserToAddRows = false;
             this.searchPatientDataGridView.AllowUserToDeleteRows = false;
+            this.searchPatientDataGridView.AllowUserToResizeColumns = false;
+            this.searchPatientDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Book", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -132,7 +160,7 @@
             this.searchPatientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Franklin Gothic Book", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -143,6 +171,7 @@
             this.searchPatientDataGridView.Name = "searchPatientDataGridView";
             this.searchPatientDataGridView.ReadOnly = true;
             this.searchPatientDataGridView.RowHeadersWidth = 62;
+            this.searchPatientDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.searchPatientDataGridView.Size = new System.Drawing.Size(775, 317);
             this.searchPatientDataGridView.TabIndex = 5;
             // 
@@ -207,27 +236,6 @@
             this.Button_Entry_Load.UseVisualStyleBackColor = true;
             this.Button_Entry_Load.Click += new System.EventHandler(this.Button_Entry_Load_Click);
             // 
-            // Button_Entry_Search
-            // 
-            this.Button_Entry_Search.BackgroundImage = global::DCLS.Properties.Resources.search;
-            this.Button_Entry_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Button_Entry_Search.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.Button_Entry_Search.Location = new System.Drawing.Point(383, 3);
-            this.Button_Entry_Search.Name = "Button_Entry_Search";
-            this.Button_Entry_Search.Size = new System.Drawing.Size(28, 28);
-            this.Button_Entry_Search.TabIndex = 1;
-            this.Button_Entry_Search.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DCLS.Properties.Resources.tooth;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(123, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // SearchPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,11 +254,11 @@
             this.Text = "Urban Smiles Dental Clinic";
             this.Load += new System.EventHandler(this.SearchPatient_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchPatientDataGridView)).EndInit();
             this.flowLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -261,7 +269,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox patientSearchTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Button_Entry_Search;
         private System.Windows.Forms.DataGridView searchPatientDataGridView;

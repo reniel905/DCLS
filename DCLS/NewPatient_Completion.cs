@@ -12,21 +12,31 @@ namespace DCLS
 {
     public partial class NewPatient_Completion : Form
     {
-        public NewPatient_Completion()
+
+        string newPatientId;
+
+        public NewPatient_Completion(string id)
         {
+            this.newPatientId = id;
             InitializeComponent();
         }
 
         private void Button_OK_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
-
-        private void Button_GoToLogCreation_Click(object sender, EventArgs e)
+        private void NewPatient_Completion_Load(object sender, EventArgs e)
         {
-            var Window = new NewLog();
-            Window.Show();
+
+            message.Text = "Patient is successfully registered under id number " + newPatientId;
+
         }
 
+        private void Button_Credits_Click(object sender, EventArgs e)
+        {
+            Close();
+            var Window = new NewLog();
+            Window.ShowDialog();
+        }
     }
 }
