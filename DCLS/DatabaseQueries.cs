@@ -32,7 +32,7 @@ namespace DCLS
 
         }
 
-        public static string addPatient(string firstName, string lastName, string middleInitial, string gender, string birthday, long contactNumber)
+        public static string addPatient(string firstName, string lastName, string middleInitial, string gender, string birthday, string contactNumber)
         {
 
             return "INSERT INTO Patients(first_name, last_name, middle_initial, gender, birthday, contact_no)" 

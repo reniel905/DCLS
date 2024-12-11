@@ -27,5 +27,6 @@ namespace DCLS
             var Window = new NewLog();
             Window.Show();
         }
+
     }
 }
