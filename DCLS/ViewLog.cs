@@ -19,7 +19,7 @@ namespace DCLS
 
         private void Button_AddLog_Click(object sender, EventArgs e)
         {
-            var Window = new NewLog_Type();
+            var Window = new NewLog_Type(this);
             Window.ShowDialog();
         }
 
@@ -33,7 +33,7 @@ namespace DCLS
             loadLogs();
         }
 
-        private void loadLogs()
+        public void loadLogs()
         {
 
             AccessDatabase displayLogs = new AccessDatabase(DatabaseQueries.GetAllLogsWithName);

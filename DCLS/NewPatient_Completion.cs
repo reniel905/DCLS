@@ -28,7 +28,7 @@ namespace DCLS
         private void NewPatient_Completion_Load(object sender, EventArgs e)
         {
 
-            message.Text = "Patient is successfully registered under id number " + newPatientId;
+            message.Text = "Patient is successfully registered under id number " + newPatientId + ".";
 
         }
 

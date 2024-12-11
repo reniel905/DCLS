@@ -38,10 +38,10 @@
             // 
             // message
             // 
-            this.message.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.message.Location = new System.Drawing.Point(17, 25);
+            this.message.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.message.Location = new System.Drawing.Point(17, 18);
             this.message.Name = "message";
-            this.message.Size = new System.Drawing.Size(332, 93);
+            this.message.Size = new System.Drawing.Size(332, 87);
             this.message.TabIndex = 1;
             this.message.Text = "Patient succesfully registered.";
             this.message.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -49,7 +49,7 @@
             // flowLayoutPanel4
             // 
             this.flowLayoutPanel4.Controls.Add(this.Button_OK);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(133, 121);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(134, 118);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(82, 37);
             this.flowLayoutPanel4.TabIndex = 8;
@@ -71,8 +71,8 @@
             this.Button_Credits.BackColor = System.Drawing.Color.Transparent;
             this.Button_Credits.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Button_Credits.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Credits.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.Button_Credits.Location = new System.Drawing.Point(117, 161);
+            this.Button_Credits.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Button_Credits.Location = new System.Drawing.Point(117, 165);
             this.Button_Credits.Name = "Button_Credits";
             this.Button_Credits.Size = new System.Drawing.Size(122, 13);
             this.Button_Credits.TabIndex = 12;

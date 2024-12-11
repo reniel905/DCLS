@@ -17,6 +17,21 @@ namespace DCLS
             InitializeComponent();
         }
 
+        public SearchPatient(string Setting)
+        {
+            InitializeComponent();
+            this.StartPosition = FormStartPosition.Manual;
+            this.ControlBox = false;
+            if (Setting == "Remove_Control_Bar")
+            {
+                Control_Bar.Visible = false;
+                foreach (Button button in Control_Bar.Controls)
+                {
+                    button.Enabled = false;
+                }
+            }
+        }
+
         private void Button_Entry_Delete_Click(object sender, EventArgs e)
         {
 
@@ -71,7 +86,7 @@ namespace DCLS
         }
 
 
-        void loadPatients()
+        public void loadPatients()
         {
 
             AccessDatabase fetchPatients = new AccessDatabase(DatabaseQueries.GetAllPatients);
@@ -83,7 +98,7 @@ namespace DCLS
         private void Add_Click(object sender, EventArgs e)
         {
 
-            var Window = new NewPatient();
+            var Window = new NewPatient(this);
             Window.ShowDialog();
 
 

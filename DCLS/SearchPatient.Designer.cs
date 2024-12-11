@@ -40,7 +40,7 @@
             this.patientSearchTextBox = new System.Windows.Forms.TextBox();
             this.Button_Entry_Search = new System.Windows.Forms.Button();
             this.searchPatientDataGridView = new System.Windows.Forms.DataGridView();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Control_Bar = new System.Windows.Forms.FlowLayoutPanel();
             this.refreshButton = new System.Windows.Forms.Button();
             this.Button_Entry_Delete = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
@@ -49,7 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchPatientDataGridView)).BeginInit();
-            this.flowLayoutPanel3.SuspendLayout();
+            this.Control_Bar.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -175,17 +175,17 @@
             this.searchPatientDataGridView.Size = new System.Drawing.Size(775, 317);
             this.searchPatientDataGridView.TabIndex = 5;
             // 
-            // flowLayoutPanel3
+            // Control_Bar
             // 
-            this.flowLayoutPanel3.Controls.Add(this.refreshButton);
-            this.flowLayoutPanel3.Controls.Add(this.Button_Entry_Delete);
-            this.flowLayoutPanel3.Controls.Add(this.Add);
-            this.flowLayoutPanel3.Controls.Add(this.Button_Entry_Load);
-            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(533, 105);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(255, 37);
-            this.flowLayoutPanel3.TabIndex = 6;
+            this.Control_Bar.Controls.Add(this.refreshButton);
+            this.Control_Bar.Controls.Add(this.Button_Entry_Delete);
+            this.Control_Bar.Controls.Add(this.Add);
+            this.Control_Bar.Controls.Add(this.Button_Entry_Load);
+            this.Control_Bar.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.Control_Bar.Location = new System.Drawing.Point(533, 105);
+            this.Control_Bar.Name = "Control_Bar";
+            this.Control_Bar.Size = new System.Drawing.Size(255, 37);
+            this.Control_Bar.TabIndex = 6;
             // 
             // refreshButton
             // 
@@ -242,7 +242,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(804, 489);
-            this.Controls.Add(this.flowLayoutPanel3);
+            this.Controls.Add(this.Control_Bar);
             this.Controls.Add(this.searchPatientDataGridView);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -258,7 +258,7 @@
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchPatientDataGridView)).EndInit();
-            this.flowLayoutPanel3.ResumeLayout(false);
+            this.Control_Bar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -273,7 +273,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Button_Entry_Search;
         private System.Windows.Forms.DataGridView searchPatientDataGridView;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel Control_Bar;
         private System.Windows.Forms.Button Button_Entry_Load;
         private System.Windows.Forms.Button Button_Entry_Delete;
         private System.Windows.Forms.Button refreshButton;

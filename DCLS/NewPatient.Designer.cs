@@ -34,20 +34,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Label_FirstName = new System.Windows.Forms.Label();
             this.createFirstNameTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Label_MiddleInitial = new System.Windows.Forms.Label();
             this.createMiddleInitialTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.Label_LastName = new System.Windows.Forms.Label();
             this.createLastNameTextBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.Label_ContactNumber = new System.Windows.Forms.Label();
             this.createContactNumberTextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.Label_Gender = new System.Windows.Forms.Label();
             this.createGenderComboBox = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.Label_Birthday = new System.Windows.Forms.Label();
             this.createPatientBirthdate = new System.Windows.Forms.DateTimePicker();
             this.Button_Register = new System.Windows.Forms.Button();
+            this.Label_ValidationMessage = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
@@ -97,114 +98,130 @@
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Controls.Add(this.label3);
+            this.flowLayoutPanel2.Controls.Add(this.Label_FirstName);
             this.flowLayoutPanel2.Controls.Add(this.createFirstNameTextBox);
-            this.flowLayoutPanel2.Controls.Add(this.label4);
+            this.flowLayoutPanel2.Controls.Add(this.Label_MiddleInitial);
             this.flowLayoutPanel2.Controls.Add(this.createMiddleInitialTextBox);
-            this.flowLayoutPanel2.Controls.Add(this.label5);
+            this.flowLayoutPanel2.Controls.Add(this.Label_LastName);
             this.flowLayoutPanel2.Controls.Add(this.createLastNameTextBox);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(15, 113);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(381, 95);
             this.flowLayoutPanel2.TabIndex = 5;
             // 
-            // label3
+            // Label_FirstName
             // 
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 26);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "First name:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Label_FirstName.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.Label_FirstName.ForeColor = System.Drawing.Color.Red;
+            this.Label_FirstName.Location = new System.Drawing.Point(3, 0);
+            this.Label_FirstName.Name = "Label_FirstName";
+            this.Label_FirstName.Size = new System.Drawing.Size(120, 26);
+            this.Label_FirstName.TabIndex = 0;
+            this.Label_FirstName.Text = "First name:";
+            this.Label_FirstName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // createFirstNameTextBox
             // 
+            this.createFirstNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.createFirstNameTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createFirstNameTextBox.Location = new System.Drawing.Point(129, 3);
             this.createFirstNameTextBox.Name = "createFirstNameTextBox";
             this.createFirstNameTextBox.Size = new System.Drawing.Size(236, 25);
             this.createFirstNameTextBox.TabIndex = 1;
+            this.createFirstNameTextBox.TextChanged += new System.EventHandler(this.createFirstNameTextBox_TextChanged);
             // 
-            // label4
+            // Label_MiddleInitial
             // 
-            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.label4.Location = new System.Drawing.Point(3, 31);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 26);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Middle Initial:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Label_MiddleInitial.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.Label_MiddleInitial.ForeColor = System.Drawing.Color.Red;
+            this.Label_MiddleInitial.Location = new System.Drawing.Point(3, 31);
+            this.Label_MiddleInitial.Name = "Label_MiddleInitial";
+            this.Label_MiddleInitial.Size = new System.Drawing.Size(120, 26);
+            this.Label_MiddleInitial.TabIndex = 2;
+            this.Label_MiddleInitial.Text = "Middle Initial:";
+            this.Label_MiddleInitial.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // createMiddleInitialTextBox
             // 
+            this.createMiddleInitialTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.createMiddleInitialTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createMiddleInitialTextBox.Location = new System.Drawing.Point(129, 34);
             this.createMiddleInitialTextBox.Name = "createMiddleInitialTextBox";
             this.createMiddleInitialTextBox.Size = new System.Drawing.Size(236, 25);
             this.createMiddleInitialTextBox.TabIndex = 3;
+            this.createMiddleInitialTextBox.TextChanged += new System.EventHandler(this.createMiddleInitialTextBox_TextChanged);
+            this.createMiddleInitialTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.createMiddleInitialTextBox_KeyPress);
             // 
-            // label5
+            // Label_LastName
             // 
-            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.label5.Location = new System.Drawing.Point(3, 62);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 26);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Last name:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Label_LastName.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.Label_LastName.ForeColor = System.Drawing.Color.Red;
+            this.Label_LastName.Location = new System.Drawing.Point(3, 62);
+            this.Label_LastName.Name = "Label_LastName";
+            this.Label_LastName.Size = new System.Drawing.Size(120, 26);
+            this.Label_LastName.TabIndex = 4;
+            this.Label_LastName.Text = "Last name:";
+            this.Label_LastName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // createLastNameTextBox
             // 
+            this.createLastNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.createLastNameTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createLastNameTextBox.Location = new System.Drawing.Point(129, 65);
             this.createLastNameTextBox.Name = "createLastNameTextBox";
             this.createLastNameTextBox.Size = new System.Drawing.Size(236, 25);
             this.createLastNameTextBox.TabIndex = 5;
+            this.createLastNameTextBox.TextChanged += new System.EventHandler(this.createLastNameTextBox_TextChanged);
             // 
             // flowLayoutPanel3
             // 
-            this.flowLayoutPanel3.Controls.Add(this.label6);
+            this.flowLayoutPanel3.Controls.Add(this.Label_ContactNumber);
             this.flowLayoutPanel3.Controls.Add(this.createContactNumberTextBox);
-            this.flowLayoutPanel3.Controls.Add(this.label7);
+            this.flowLayoutPanel3.Controls.Add(this.Label_Gender);
             this.flowLayoutPanel3.Controls.Add(this.createGenderComboBox);
-            this.flowLayoutPanel3.Controls.Add(this.label8);
+            this.flowLayoutPanel3.Controls.Add(this.Label_Birthday);
             this.flowLayoutPanel3.Controls.Add(this.createPatientBirthdate);
             this.flowLayoutPanel3.Location = new System.Drawing.Point(407, 113);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(381, 95);
             this.flowLayoutPanel3.TabIndex = 6;
             // 
-            // label6
+            // Label_ContactNumber
             // 
-            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 26);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Contact number:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Label_ContactNumber.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.Label_ContactNumber.ForeColor = System.Drawing.Color.Red;
+            this.Label_ContactNumber.Location = new System.Drawing.Point(3, 0);
+            this.Label_ContactNumber.Name = "Label_ContactNumber";
+            this.Label_ContactNumber.Size = new System.Drawing.Size(120, 26);
+            this.Label_ContactNumber.TabIndex = 0;
+            this.Label_ContactNumber.Text = "Contact number:";
+            this.Label_ContactNumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // createContactNumberTextBox
             // 
+            this.createContactNumberTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.createContactNumberTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createContactNumberTextBox.Location = new System.Drawing.Point(129, 3);
             this.createContactNumberTextBox.Name = "createContactNumberTextBox";
             this.createContactNumberTextBox.Size = new System.Drawing.Size(236, 25);
             this.createContactNumberTextBox.TabIndex = 1;
+            this.createContactNumberTextBox.TextChanged += new System.EventHandler(this.createContactNumberTextBox_TextChanged);
+            this.createContactNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.createContactNumberTextBox_KeyPress);
             // 
-            // label7
+            // Label_Gender
             // 
-            this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.label7.Location = new System.Drawing.Point(3, 31);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 26);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Gender:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Label_Gender.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.Label_Gender.ForeColor = System.Drawing.Color.Red;
+            this.Label_Gender.Location = new System.Drawing.Point(3, 31);
+            this.Label_Gender.Name = "Label_Gender";
+            this.Label_Gender.Size = new System.Drawing.Size(120, 26);
+            this.Label_Gender.TabIndex = 2;
+            this.Label_Gender.Text = "Gender:";
+            this.Label_Gender.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // createGenderComboBox
             // 
+            this.createGenderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.createGenderComboBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
             this.createGenderComboBox.FormattingEnabled = true;
             this.createGenderComboBox.Items.AddRange(new object[] {
@@ -216,16 +233,17 @@
             this.createGenderComboBox.Name = "createGenderComboBox";
             this.createGenderComboBox.Size = new System.Drawing.Size(236, 28);
             this.createGenderComboBox.TabIndex = 7;
+            this.createGenderComboBox.SelectedIndexChanged += new System.EventHandler(this.createGenderComboBox_SelectedIndexChanged);
             // 
-            // label8
+            // Label_Birthday
             // 
-            this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.label8.Location = new System.Drawing.Point(3, 65);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(120, 26);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Birthday:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Label_Birthday.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.Label_Birthday.Location = new System.Drawing.Point(3, 65);
+            this.Label_Birthday.Name = "Label_Birthday";
+            this.Label_Birthday.Size = new System.Drawing.Size(120, 26);
+            this.Label_Birthday.TabIndex = 4;
+            this.Label_Birthday.Text = "Birthday:";
+            this.Label_Birthday.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // createPatientBirthdate
             // 
@@ -238,6 +256,7 @@
             // 
             // Button_Register
             // 
+            this.Button_Register.Enabled = false;
             this.Button_Register.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
             this.Button_Register.Location = new System.Drawing.Point(624, 223);
             this.Button_Register.Name = "Button_Register";
@@ -246,6 +265,17 @@
             this.Button_Register.Text = "Register";
             this.Button_Register.UseVisualStyleBackColor = true;
             this.Button_Register.Click += new System.EventHandler(this.Button_Register_Click);
+            // 
+            // Label_ValidationMessage
+            // 
+            this.Label_ValidationMessage.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_ValidationMessage.ForeColor = System.Drawing.Color.DarkGray;
+            this.Label_ValidationMessage.Location = new System.Drawing.Point(22, 223);
+            this.Label_ValidationMessage.Name = "Label_ValidationMessage";
+            this.Label_ValidationMessage.Size = new System.Drawing.Size(596, 44);
+            this.Label_ValidationMessage.TabIndex = 6;
+            this.Label_ValidationMessage.Text = "Please fill all required fields in red.";
+            this.Label_ValidationMessage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // NewPatient
             // 
@@ -257,6 +287,7 @@
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel3);
+            this.Controls.Add(this.Label_ValidationMessage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -280,19 +311,20 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Label_FirstName;
         private System.Windows.Forms.TextBox createFirstNameTextBox;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Label_MiddleInitial;
         private System.Windows.Forms.TextBox createMiddleInitialTextBox;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Label_LastName;
         private System.Windows.Forms.TextBox createLastNameTextBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Label_ContactNumber;
         private System.Windows.Forms.TextBox createContactNumberTextBox;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Label_Gender;
         private System.Windows.Forms.ComboBox createGenderComboBox;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label Label_Birthday;
         private System.Windows.Forms.DateTimePicker createPatientBirthdate;
         private System.Windows.Forms.Button Button_Register;
+        private System.Windows.Forms.Label Label_ValidationMessage;
     }
 }
