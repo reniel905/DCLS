@@ -12,8 +12,13 @@ namespace DCLS
 {
     public partial class SearchPatient_Delete_Confirmation : Form
     {
-        public SearchPatient_Delete_Confirmation()
+
+        int patientId;
+
+        public SearchPatient_Delete_Confirmation(int id)
         {
+
+            this.patientId = id;
             InitializeComponent();
         }
 
@@ -24,6 +29,8 @@ namespace DCLS
 
         private void Button_ConfirmDeletion_Click(object sender, EventArgs e)
         {
+            AccessDatabase deletePatient = new AccessDatabase(DatabaseQueries.deletePatient(patientId));
+            deletePatient.executeDatabaseQuery();
             this.Close();
         }
     }

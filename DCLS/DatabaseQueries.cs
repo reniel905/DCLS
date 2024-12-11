@@ -17,17 +17,36 @@ namespace DCLS
         public static string deletePatient(int id)
         {
 
-            return "DELETE FROM Patients WHERE id=" + id;
+            return "DELETE FROM Logs WHERE patient_id = " + id + "; " +
+                "DELETE FROM Patients WHERE patient_id = " + id + "; ";
 
         }
 
         public static string getPatientHistory(int patientId) 
         {
 
-            return "SELECT log_id, CONCAT(Patients.first_name, ' ', Patients.middle_initial, '. ', Patients.last_name) AS full_name, date, [procedure] " +
+            return "SELECT log_id, date, [procedure] " +
                "FROM Logs " +
                "JOIN Patients ON Logs.patient_id = Patients.patient_id " +
                "WHERE Logs.patient_id = " + patientId;
+
+        }
+
+        public static string addPatient(string firstName, string lastName, string middleInitial, string gender, string birthday, long contactNumber)
+        {
+
+            return "INSERT INTO Patients(first_name, last_name, middle_initial, gender, birthday, contact_no)" 
+                + "VALUES ( '" + firstName + "', '" + lastName + "', '" + middleInitial + "', '" + gender + "', '" + birthday + "', '" + contactNumber + "')";
+
+
+        }
+
+        public static string updatePatient(int id, string firstName, string lastName, string middleInitial, string gender, string birthday, string contactNumber)
+        {
+
+            return "UPDATE Patients " +
+                "SET first_name = '" + firstName + "', " + "last_name = '" + lastName + "', " + "middle_initial = '" + middleInitial + "', " + "gender = '" + gender + "', " + "birthday = '" + birthday + "', " + "contact_no = '" + contactNumber + "' " +
+                "WHERE patient_id = " + id;
 
         }
     }

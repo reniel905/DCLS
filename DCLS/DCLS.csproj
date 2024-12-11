@@ -71,7 +71,7 @@
       <DependentUpon>AddNewLog.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseQueries.cs" />
-    <Compile Include="FetchToDatabase.cs" />
+    <Compile Include="AccessDatabase.cs" />
     <Compile Include="InitialScreen.cs">
       <SubType>Form</SubType>
     </Compile>

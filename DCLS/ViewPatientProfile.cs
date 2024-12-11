@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DCLS
@@ -23,7 +16,7 @@ namespace DCLS
             this.patientId = Convert.ToInt32(id);
 
             firstNameTextBox.Text = firstName;
-            middleNameTextBox.Text = middleInitial;
+            middleInitialTextBox.Text = middleInitial;
             lastNameTextBox.Text = lastName;
             contactNumberTextBox.Text = contactNumber;
             genderComboBox.Text = gender;
@@ -46,8 +39,42 @@ namespace DCLS
 
         private void ViewPatientProfile_Load(object sender, EventArgs e)
         {
-            FetchToDatabase fetchPatients = new FetchToDatabase(DatabaseQueries.getPatientHistory(patientId));
-            patientHistoryDataGridView.DataSource = fetchPatients.fetchData();
+            AccessDatabase fetchPatients = new AccessDatabase(DatabaseQueries.getPatientHistory(patientId));
+            patientHistoryDataGridView.DataSource = fetchPatients.executeDatabaseQuery();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            firstNameTextBox.Enabled = true;
+            middleInitialTextBox.Enabled = true;
+            lastNameTextBox.Enabled = true;
+            contactNumberTextBox.Enabled = true;
+            genderComboBox.Enabled = true;
+            patientBirthday.Enabled = true;
+           
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            string firstName = firstNameTextBox.Text;
+            string lastName = lastNameTextBox.Text;
+            string middleName = middleInitialTextBox.Text;
+            string contactNumber = contactNumberTextBox.Text;
+            string gender = genderComboBox.Text;
+            string birthday = patientBirthday.Text;
+
+            AccessDatabase updatePatients = new AccessDatabase(DatabaseQueries.updatePatient(patientId, firstName, lastName, middleName, gender, birthday, contactNumber));
+            updatePatients.executeDatabaseQuery();
+
+            firstNameTextBox.Enabled = false;
+            middleInitialTextBox.Enabled = false;
+            lastNameTextBox.Enabled = false;
+            contactNumberTextBox.Enabled = false;
+            genderComboBox.Enabled = false;
+            patientBirthday.Enabled = false;
 
         }
     }

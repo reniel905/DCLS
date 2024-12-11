@@ -7,21 +7,22 @@ using System.Collections.Generic;
 
 namespace DCLS
 {
-    public class FetchToDatabase
+    public class AccessDatabase
     {
       
-        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Reniel\\Source\\Repos\\Dental-Clinic-Log-System\\DCLS\\Database.mdf;Integrated Security=True";
+        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\baldo\\Source\\Repos\\DCLS\\DCLS\\Database.mdf;Integrated Security=True";
         DataTable dataTable = new DataTable();
         string query;
 
-        public FetchToDatabase(string query)
+        public AccessDatabase(string query)
         {
 
             this.query = query;
 
         }
-
-        public DataTable fetchData()
+         
+        // can return a datatable if the query has select or view function
+        public DataTable executeDatabaseQuery()
         {
 
             SqlConnection connection = new SqlConnection(connectionString);
