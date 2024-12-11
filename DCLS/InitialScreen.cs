@@ -34,5 +34,11 @@ namespace DCLS
             var Window = new ViewLog();
             Window.ShowDialog();
         }
+
+        private void Button_Credits_Click(object sender, EventArgs e)
+        {
+            var Window = new InitialScreen_Credits();
+            Window.ShowDialog();
+        }
     }
 }

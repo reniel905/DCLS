@@ -60,19 +60,17 @@
             this.flowLayoutPanel1.Controls.Add(this.pictureBox1);
             this.flowLayoutPanel1.Controls.Add(this.label2);
             this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(18, 18);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1162, 117);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(775, 76);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DCLS.Properties.Resources.tooth;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(184, 112);
+            this.pictureBox1.Size = new System.Drawing.Size(123, 73);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -80,10 +78,9 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(196, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(132, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(513, 117);
+            this.label2.Size = new System.Drawing.Size(342, 76);
             this.label2.TabIndex = 2;
             this.label2.Text = "Urban Smiles Dental Clinic";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -91,10 +88,9 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(717, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(480, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(428, 117);
+            this.label1.Size = new System.Drawing.Size(285, 76);
             this.label1.TabIndex = 6;
             this.label1.Text = "Add new patient";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -107,19 +103,17 @@
             this.flowLayoutPanel2.Controls.Add(this.createMiddleInitialTextBox);
             this.flowLayoutPanel2.Controls.Add(this.label5);
             this.flowLayoutPanel2.Controls.Add(this.createLastNameTextBox);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(22, 174);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(15, 113);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(572, 146);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(381, 95);
             this.flowLayoutPanel2.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.label3.Location = new System.Drawing.Point(4, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(180, 40);
+            this.label3.Size = new System.Drawing.Size(120, 26);
             this.label3.TabIndex = 0;
             this.label3.Text = "First name:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -127,19 +121,17 @@
             // createFirstNameTextBox
             // 
             this.createFirstNameTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createFirstNameTextBox.Location = new System.Drawing.Point(192, 5);
-            this.createFirstNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.createFirstNameTextBox.Location = new System.Drawing.Point(129, 3);
             this.createFirstNameTextBox.Name = "createFirstNameTextBox";
-            this.createFirstNameTextBox.Size = new System.Drawing.Size(352, 33);
+            this.createFirstNameTextBox.Size = new System.Drawing.Size(236, 25);
             this.createFirstNameTextBox.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.label4.Location = new System.Drawing.Point(4, 43);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(3, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(180, 40);
+            this.label4.Size = new System.Drawing.Size(120, 26);
             this.label4.TabIndex = 2;
             this.label4.Text = "Middle Initial:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -147,19 +139,17 @@
             // createMiddleInitialTextBox
             // 
             this.createMiddleInitialTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createMiddleInitialTextBox.Location = new System.Drawing.Point(192, 48);
-            this.createMiddleInitialTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.createMiddleInitialTextBox.Location = new System.Drawing.Point(129, 34);
             this.createMiddleInitialTextBox.Name = "createMiddleInitialTextBox";
-            this.createMiddleInitialTextBox.Size = new System.Drawing.Size(352, 33);
+            this.createMiddleInitialTextBox.Size = new System.Drawing.Size(236, 25);
             this.createMiddleInitialTextBox.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.label5.Location = new System.Drawing.Point(4, 86);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(3, 62);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(180, 40);
+            this.label5.Size = new System.Drawing.Size(120, 26);
             this.label5.TabIndex = 4;
             this.label5.Text = "Last name:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -167,10 +157,9 @@
             // createLastNameTextBox
             // 
             this.createLastNameTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createLastNameTextBox.Location = new System.Drawing.Point(192, 91);
-            this.createLastNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.createLastNameTextBox.Location = new System.Drawing.Point(129, 65);
             this.createLastNameTextBox.Name = "createLastNameTextBox";
-            this.createLastNameTextBox.Size = new System.Drawing.Size(352, 33);
+            this.createLastNameTextBox.Size = new System.Drawing.Size(236, 25);
             this.createLastNameTextBox.TabIndex = 5;
             // 
             // flowLayoutPanel3
@@ -181,19 +170,17 @@
             this.flowLayoutPanel3.Controls.Add(this.createGenderComboBox);
             this.flowLayoutPanel3.Controls.Add(this.label8);
             this.flowLayoutPanel3.Controls.Add(this.createPatientBirthdate);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(610, 174);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(407, 113);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(572, 146);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(381, 95);
             this.flowLayoutPanel3.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.label6.Location = new System.Drawing.Point(4, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(180, 40);
+            this.label6.Size = new System.Drawing.Size(120, 26);
             this.label6.TabIndex = 0;
             this.label6.Text = "Contact number:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -201,19 +188,17 @@
             // createContactNumberTextBox
             // 
             this.createContactNumberTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createContactNumberTextBox.Location = new System.Drawing.Point(192, 5);
-            this.createContactNumberTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.createContactNumberTextBox.Location = new System.Drawing.Point(129, 3);
             this.createContactNumberTextBox.Name = "createContactNumberTextBox";
-            this.createContactNumberTextBox.Size = new System.Drawing.Size(352, 33);
+            this.createContactNumberTextBox.Size = new System.Drawing.Size(236, 25);
             this.createContactNumberTextBox.TabIndex = 1;
             // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.label7.Location = new System.Drawing.Point(4, 43);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(3, 31);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(180, 40);
+            this.label7.Size = new System.Drawing.Size(120, 26);
             this.label7.TabIndex = 2;
             this.label7.Text = "Gender:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -227,19 +212,17 @@
             "Female",
             "LGBTQIA+",
             "Prefer not say"});
-            this.createGenderComboBox.Location = new System.Drawing.Point(192, 48);
-            this.createGenderComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.createGenderComboBox.Location = new System.Drawing.Point(129, 34);
             this.createGenderComboBox.Name = "createGenderComboBox";
-            this.createGenderComboBox.Size = new System.Drawing.Size(352, 37);
+            this.createGenderComboBox.Size = new System.Drawing.Size(236, 28);
             this.createGenderComboBox.TabIndex = 7;
             // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.label8.Location = new System.Drawing.Point(4, 90);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(3, 65);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(180, 40);
+            this.label8.Size = new System.Drawing.Size(120, 26);
             this.label8.TabIndex = 4;
             this.label8.Text = "Birthday:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -248,19 +231,17 @@
             // 
             this.createPatientBirthdate.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
             this.createPatientBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.createPatientBirthdate.Location = new System.Drawing.Point(192, 95);
-            this.createPatientBirthdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.createPatientBirthdate.Location = new System.Drawing.Point(129, 68);
             this.createPatientBirthdate.Name = "createPatientBirthdate";
-            this.createPatientBirthdate.Size = new System.Drawing.Size(352, 33);
+            this.createPatientBirthdate.Size = new System.Drawing.Size(236, 25);
             this.createPatientBirthdate.TabIndex = 8;
             // 
             // Button_Register
             // 
             this.Button_Register.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.Button_Register.Location = new System.Drawing.Point(936, 343);
-            this.Button_Register.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Button_Register.Location = new System.Drawing.Point(624, 223);
             this.Button_Register.Name = "Button_Register";
-            this.Button_Register.Size = new System.Drawing.Size(244, 68);
+            this.Button_Register.Size = new System.Drawing.Size(163, 44);
             this.Button_Register.TabIndex = 7;
             this.Button_Register.Text = "Register";
             this.Button_Register.UseVisualStyleBackColor = true;
@@ -268,17 +249,19 @@
             // 
             // NewPatient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 434);
+            this.ClientSize = new System.Drawing.Size(800, 282);
             this.Controls.Add(this.Button_Register);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "NewPatient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add new patient";
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
