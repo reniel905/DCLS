@@ -10,7 +10,7 @@ namespace DCLS
     public class AccessDatabase
     {
       
-        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\baldo\\Source\\Repos\\DCLS\\DCLS\\Database.mdf;Integrated Security=True";
+        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Elmer\\Documents\\College 3 Files\\First Semester\\26315 Event-Driven Programming\\Output\\07 Laboratory Exercise & Performance Task 1\\Reniels Version\\DCLS\\Database.mdf\";Integrated Security=True";
         DataTable dataTable = new DataTable();
         string query;
 

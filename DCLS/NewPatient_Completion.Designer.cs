@@ -39,20 +39,20 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(17, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(332, 32);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Patient had been successfully registered.";
+            this.label1.Text = "Patient succesfully registered.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // flowLayoutPanel4
             // 
             this.flowLayoutPanel4.Controls.Add(this.Button_OK);
             this.flowLayoutPanel4.Controls.Add(this.Button_GoToLogCreation);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(54, 44);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(56, 40);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(256, 37);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(251, 37);
             this.flowLayoutPanel4.TabIndex = 8;
             // 
             // Button_OK
@@ -71,11 +71,9 @@
             this.Button_GoToLogCreation.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
             this.Button_GoToLogCreation.Location = new System.Drawing.Point(84, 3);
             this.Button_GoToLogCreation.Name = "Button_GoToLogCreation";
-            this.Button_GoToLogCreation.Size = new System.Drawing.Size(164, 28);
+            this.Button_GoToLogCreation.Size = new System.Drawing.Size(161, 28);
             this.Button_GoToLogCreation.TabIndex = 2;
             this.Button_GoToLogCreation.Text = "Go to log creation";
-            this.Button_GoToLogCreation.UseVisualStyleBackColor = true;
-            this.Button_GoToLogCreation.Click += new System.EventHandler(this.Button_GoToLogCreation_Click);
             // 
             // NewPatient_Completion
             // 
