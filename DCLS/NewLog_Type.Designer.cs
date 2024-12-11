@@ -75,8 +75,10 @@
             this.Controls.Add(this.Button_Patient_Old);
             this.Controls.Add(this.Button_Patient_New);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewLog_Type";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Urban Smiles Dental Clinic";
             this.ResumeLayout(false);
 

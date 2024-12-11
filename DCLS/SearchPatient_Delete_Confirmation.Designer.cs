@@ -85,8 +85,10 @@
             this.ClientSize = new System.Drawing.Size(372, 119);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SearchPatient_Delete_Confirmation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Urban Smiles Dental Clinic";
             this.flowLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);

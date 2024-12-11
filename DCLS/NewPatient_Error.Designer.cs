@@ -72,8 +72,10 @@
             this.ClientSize = new System.Drawing.Size(355, 93);
             this.Controls.Add(this.flowLayoutPanel4);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewPatient_Error";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Urban Smiles Dental Clinic";
             this.flowLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
