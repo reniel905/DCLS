@@ -49,5 +49,16 @@ namespace DCLS
                 "WHERE patient_id = " + id;
 
         }
+
+        public static string addLog(int patientID, string date, string procedure) //JC po to, Might be wrong
+        {
+            return "INSERT INTO Logs(patient_id, date, procedure)"
+                + "VALUES( '" + patientID + "', '" + date + "','" + procedure + "',)";
+        }
+
+        public static string viewLog() //Still needs a query
+        {
+            return null;
+        }
     }
 }

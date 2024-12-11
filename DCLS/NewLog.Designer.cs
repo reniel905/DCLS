@@ -142,10 +142,17 @@
             this.comboBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "LGBTQIA+",
-            "Prefer not say"});
+            "Routine Checkup",
+            "Dental Cleaning",
+            "Fillings",
+            "Root Canal Treatment",
+            "Tooth Extraction",
+            "Wisdom Tooth Removal",
+            "Dental Implants",
+            "Braces",
+            "Teeth Whitening",
+            "Cosmetic Bonding",
+            "Dental X-Rays"});
             this.comboBox1.Location = new System.Drawing.Point(129, 34);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(236, 28);
