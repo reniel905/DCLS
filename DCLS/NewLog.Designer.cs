@@ -48,6 +48,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.Button_AddToLog = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
@@ -115,7 +116,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 26);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Id number:";
+            this.label3.Text = "* Id number:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox1
@@ -133,7 +134,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 26);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Procedure:";
+            this.label4.Text = "* Procedure:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // comboBox1
@@ -141,10 +142,17 @@
             this.comboBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "LGBTQIA+",
-            "Prefer not say"});
+            "Routine Checkup",
+            "Dental Cleaning",
+            "Fillings",
+            "Root Canal Treatment",
+            "Tooth Extraction",
+            "Wisdom Tooth Removal",
+            "Dental Implants",
+            "Braces",
+            "Teeth Whitening",
+            "Cosmetic Bonding",
+            "Dental X-Rays"});
             this.comboBox1.Location = new System.Drawing.Point(129, 34);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(236, 28);
@@ -157,7 +165,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 26);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Date/time:";
+            this.label5.Text = "* Date/time:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dateTimePicker1
@@ -188,7 +196,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(120, 26);
             this.label6.TabIndex = 0;
-            this.label6.Text = "First name:";
+            this.label6.Text = "* First name:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox2
@@ -206,7 +214,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(120, 26);
             this.label7.TabIndex = 2;
-            this.label7.Text = "Middle name:";
+            this.label7.Text = "* Middle name:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox3
@@ -224,7 +232,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(120, 26);
             this.label8.TabIndex = 4;
-            this.label8.Text = "Last name:";
+            this.label8.Text = "* Last name:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox4
@@ -246,12 +254,24 @@
             this.Button_AddToLog.UseVisualStyleBackColor = true;
             this.Button_AddToLog.Click += new System.EventHandler(this.Button_AddToLog_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(16, 252);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(81, 21);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "* = required";
+            // 
             // NewLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 282);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.Button_AddToLog);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -269,6 +289,7 @@
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -293,5 +314,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button Button_AddToLog;
+        private System.Windows.Forms.Label label9;
     }
 }
