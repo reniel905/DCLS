@@ -44,7 +44,7 @@ namespace DCLS
                 // Retrieve data from each column
                 string patientId = searchPatientDataGridView.CurrentRow.Cells["patient_id"].Value.ToString();
 
-                var Window = new SearchPatient_Delete_Confirmation(Convert.ToInt32(patientId));
+                var Window = new SearchPatient_Delete_Confirmation(Convert.ToInt32(patientId), this);
                 Window.ShowDialog();
             }
             else

@@ -133,7 +133,7 @@
             // Label_MiddleInitial
             // 
             this.Label_MiddleInitial.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.Label_MiddleInitial.ForeColor = System.Drawing.Color.Red;
+            this.Label_MiddleInitial.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Label_MiddleInitial.Location = new System.Drawing.Point(3, 31);
             this.Label_MiddleInitial.Name = "Label_MiddleInitial";
             this.Label_MiddleInitial.Size = new System.Drawing.Size(120, 26);

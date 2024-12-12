@@ -15,11 +15,13 @@ namespace DCLS
 
         int patientId;
 
-        public SearchPatient_Delete_Confirmation(int id)
+        private SearchPatient Window_Reference;
+        public SearchPatient_Delete_Confirmation(int id, SearchPatient Window = null)
         {
 
             this.patientId = id;
             InitializeComponent();
+            Window_Reference = Window;
         }
 
         private void Button_Close_Click(object sender, EventArgs e)
@@ -31,6 +33,7 @@ namespace DCLS
         {
             AccessDatabase deletePatient = new AccessDatabase(DatabaseQueries.deletePatient(patientId));
             deletePatient.executeDatabaseQuery();
+            Window_Reference?.loadPatients();
             this.Close();
         }
     }

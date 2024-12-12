@@ -88,7 +88,7 @@ namespace DCLS
 
         private void createMiddleInitialTextBox_TextChanged(object sender, EventArgs e)
         {
-            evaluateInput();
+           /* evaluateInput();
             if (createMiddleInitialTextBox.Text == "")
             {
                 Label_MiddleInitial.ForeColor = Color.Red;
@@ -96,7 +96,7 @@ namespace DCLS
             else
             {
                 Label_MiddleInitial.ForeColor = Color.Black;
-            }
+            }*/
         }
 
         private void createMiddleInitialTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -166,7 +166,6 @@ namespace DCLS
 
             if (createFirstNameTextBox.Text == "" ||
                 createLastNameTextBox.Text == "" ||
-                createMiddleInitialTextBox.Text == "" ||
                 createContactNumberTextBox.Text == "" ||
                 createGenderComboBox.Text == "" ||
                 createPatientBirthdate.Text == "")
