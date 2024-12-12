@@ -418,6 +418,7 @@
             this.patientIdNumber.TabIndex = 0;
             this.patientIdNumber.Text = "0";
             this.patientIdNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.patientIdNumber.Click += new System.EventHandler(this.patientIdNumber_Click);
             // 
             // Label_ValidationMessage
             // 

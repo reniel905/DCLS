@@ -108,7 +108,7 @@ namespace DCLS
         private void Add_Click(object sender, EventArgs e)
         {
 
-            var Window = new NewLog();
+            var Window = new NewLog(patientIdNumber.Text);
             Window.ShowDialog();
 
 
@@ -254,6 +254,11 @@ namespace DCLS
                 }
 
             }
+        }
+
+        private void patientIdNumber_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

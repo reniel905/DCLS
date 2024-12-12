@@ -15,6 +15,7 @@ namespace DCLS
     {
         private ViewLog Window_Reference;
         private SearchPatient Window_Reference_List;
+        private string Patient_ID;
         public NewLog(ViewLog Window = null, SearchPatient Window_List = null)
         {
             this.TopMost = true;
@@ -22,7 +23,17 @@ namespace DCLS
             Window_Reference = Window;
             Window_Reference_List = Window_List;
 
+            logDateTimePicker.MaxDate = DateTime.Today;
+
             this.FormClosing += new FormClosingEventHandler(NewLog_FormClosing);
+        }
+
+        public NewLog(string id)
+        {
+            InitializeComponent();
+            Patient_ID = id;
+            this.TopMost = true;
+            idNumberTextBox_SetText(Patient_ID);
         }
 
         private void Button_AddToLog_Click(object sender, EventArgs e)
@@ -37,7 +48,7 @@ namespace DCLS
             AccessDatabase addNewLog = new AccessDatabase(DatabaseQueries.addLog(id, date, procedure));
             addNewLog.executeDatabaseQuery();
 
-            Window_Reference_List.Close();
+            Window_Reference_List?.Close();
             this.Close();
         }
 
