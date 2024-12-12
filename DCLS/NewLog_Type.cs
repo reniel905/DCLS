@@ -38,9 +38,13 @@ namespace DCLS
             
 
             var Window_List = new SearchPatient("Remove_Control_Bar");
-            Window_List.Show();
+            
 
             var Window = new NewLog(Window_Reference, Window_List);
+
+            Window_List.setReference_NewLog(Window);
+
+            Window_List.Show();
             Window.Show();
 
         }

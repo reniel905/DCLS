@@ -34,16 +34,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Label_FirstName = new System.Windows.Forms.Label();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Label_MiddleInitial = new System.Windows.Forms.Label();
             this.middleInitialTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.Label_LastName = new System.Windows.Forms.Label();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.Label_ContactNumber = new System.Windows.Forms.Label();
             this.contactNumberTextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.Label_Gender = new System.Windows.Forms.Label();
             this.genderComboBox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.patientBirthday = new System.Windows.Forms.DateTimePicker();
@@ -60,6 +60,7 @@
             this.Add = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.patientIdNumber = new System.Windows.Forms.Label();
+            this.Label_ValidationMessage = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
@@ -111,26 +112,26 @@
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Controls.Add(this.label3);
+            this.flowLayoutPanel2.Controls.Add(this.Label_FirstName);
             this.flowLayoutPanel2.Controls.Add(this.firstNameTextBox);
-            this.flowLayoutPanel2.Controls.Add(this.label4);
+            this.flowLayoutPanel2.Controls.Add(this.Label_MiddleInitial);
             this.flowLayoutPanel2.Controls.Add(this.middleInitialTextBox);
-            this.flowLayoutPanel2.Controls.Add(this.label5);
+            this.flowLayoutPanel2.Controls.Add(this.Label_LastName);
             this.flowLayoutPanel2.Controls.Add(this.lastNameTextBox);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(16, 140);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(381, 95);
             this.flowLayoutPanel2.TabIndex = 7;
             // 
-            // label3
+            // Label_FirstName
             // 
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 26);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "First name:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Label_FirstName.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.Label_FirstName.Location = new System.Drawing.Point(3, 0);
+            this.Label_FirstName.Name = "Label_FirstName";
+            this.Label_FirstName.Size = new System.Drawing.Size(120, 26);
+            this.Label_FirstName.TabIndex = 0;
+            this.Label_FirstName.Text = "First name:";
+            this.Label_FirstName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // firstNameTextBox
             // 
@@ -140,16 +141,17 @@
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(236, 25);
             this.firstNameTextBox.TabIndex = 1;
+            this.firstNameTextBox.TextChanged += new System.EventHandler(this.firstNameTextBox_TextChanged);
             // 
-            // label4
+            // Label_MiddleInitial
             // 
-            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.label4.Location = new System.Drawing.Point(3, 31);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 26);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Middle Initial:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Label_MiddleInitial.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.Label_MiddleInitial.Location = new System.Drawing.Point(3, 31);
+            this.Label_MiddleInitial.Name = "Label_MiddleInitial";
+            this.Label_MiddleInitial.Size = new System.Drawing.Size(120, 26);
+            this.Label_MiddleInitial.TabIndex = 2;
+            this.Label_MiddleInitial.Text = "Middle Initial:";
+            this.Label_MiddleInitial.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // middleInitialTextBox
             // 
@@ -159,16 +161,18 @@
             this.middleInitialTextBox.Name = "middleInitialTextBox";
             this.middleInitialTextBox.Size = new System.Drawing.Size(236, 25);
             this.middleInitialTextBox.TabIndex = 3;
+            this.middleInitialTextBox.TextChanged += new System.EventHandler(this.middleInitialTextBox_TextChanged);
+            this.middleInitialTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.middleInitialTextBox_KeyPress);
             // 
-            // label5
+            // Label_LastName
             // 
-            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.label5.Location = new System.Drawing.Point(3, 62);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 26);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Last name:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Label_LastName.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.Label_LastName.Location = new System.Drawing.Point(3, 62);
+            this.Label_LastName.Name = "Label_LastName";
+            this.Label_LastName.Size = new System.Drawing.Size(120, 26);
+            this.Label_LastName.TabIndex = 4;
+            this.Label_LastName.Text = "Last name:";
+            this.Label_LastName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lastNameTextBox
             // 
@@ -178,12 +182,13 @@
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(236, 25);
             this.lastNameTextBox.TabIndex = 5;
+            this.lastNameTextBox.TextChanged += new System.EventHandler(this.lastNameTextBox_TextChanged);
             // 
             // flowLayoutPanel3
             // 
-            this.flowLayoutPanel3.Controls.Add(this.label6);
+            this.flowLayoutPanel3.Controls.Add(this.Label_ContactNumber);
             this.flowLayoutPanel3.Controls.Add(this.contactNumberTextBox);
-            this.flowLayoutPanel3.Controls.Add(this.label7);
+            this.flowLayoutPanel3.Controls.Add(this.Label_Gender);
             this.flowLayoutPanel3.Controls.Add(this.genderComboBox);
             this.flowLayoutPanel3.Controls.Add(this.label8);
             this.flowLayoutPanel3.Controls.Add(this.patientBirthday);
@@ -194,15 +199,15 @@
             this.flowLayoutPanel3.Size = new System.Drawing.Size(381, 95);
             this.flowLayoutPanel3.TabIndex = 8;
             // 
-            // label6
+            // Label_ContactNumber
             // 
-            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 26);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Contact number:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Label_ContactNumber.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.Label_ContactNumber.Location = new System.Drawing.Point(3, 0);
+            this.Label_ContactNumber.Name = "Label_ContactNumber";
+            this.Label_ContactNumber.Size = new System.Drawing.Size(120, 26);
+            this.Label_ContactNumber.TabIndex = 0;
+            this.Label_ContactNumber.Text = "Contact number:";
+            this.Label_ContactNumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // contactNumberTextBox
             // 
@@ -212,19 +217,22 @@
             this.contactNumberTextBox.Name = "contactNumberTextBox";
             this.contactNumberTextBox.Size = new System.Drawing.Size(242, 25);
             this.contactNumberTextBox.TabIndex = 1;
+            this.contactNumberTextBox.TextChanged += new System.EventHandler(this.contactNumberTextBox_TextChanged);
+            this.contactNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.contactNumberTextBox_KeyPress);
             // 
-            // label7
+            // Label_Gender
             // 
-            this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.label7.Location = new System.Drawing.Point(3, 31);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 26);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Gender:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Label_Gender.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.Label_Gender.Location = new System.Drawing.Point(3, 31);
+            this.Label_Gender.Name = "Label_Gender";
+            this.Label_Gender.Size = new System.Drawing.Size(120, 26);
+            this.Label_Gender.TabIndex = 2;
+            this.Label_Gender.Text = "Gender:";
+            this.Label_Gender.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // genderComboBox
             // 
+            this.genderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.genderComboBox.Enabled = false;
             this.genderComboBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
             this.genderComboBox.FormattingEnabled = true;
@@ -237,6 +245,7 @@
             this.genderComboBox.Name = "genderComboBox";
             this.genderComboBox.Size = new System.Drawing.Size(241, 28);
             this.genderComboBox.TabIndex = 7;
+            this.genderComboBox.SelectedIndexChanged += new System.EventHandler(this.genderComboBox_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -284,9 +293,9 @@
             this.flowLayoutPanel4.Controls.Add(this.button3);
             this.flowLayoutPanel4.Controls.Add(this.button2);
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(609, 94);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(690, 94);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(180, 37);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(99, 37);
             this.flowLayoutPanel4.TabIndex = 7;
             // 
             // button3
@@ -295,7 +304,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.Enabled = false;
             this.button3.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.button3.Location = new System.Drawing.Point(149, 3);
+            this.button3.Location = new System.Drawing.Point(68, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(28, 28);
             this.button3.TabIndex = 2;
@@ -308,7 +317,7 @@
             this.button2.BackgroundImage = global::DCLS.Properties.Resources.pencil;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.button2.Location = new System.Drawing.Point(115, 3);
+            this.button2.Location = new System.Drawing.Point(34, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(28, 28);
             this.button2.TabIndex = 1;
@@ -410,12 +419,24 @@
             this.patientIdNumber.Text = "0";
             this.patientIdNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // Label_ValidationMessage
+            // 
+            this.Label_ValidationMessage.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_ValidationMessage.ForeColor = System.Drawing.Color.DarkGray;
+            this.Label_ValidationMessage.Location = new System.Drawing.Point(284, 94);
+            this.Label_ValidationMessage.Name = "Label_ValidationMessage";
+            this.Label_ValidationMessage.Size = new System.Drawing.Size(400, 37);
+            this.Label_ValidationMessage.TabIndex = 12;
+            this.Label_ValidationMessage.Text = "Please fill all required fields in red.";
+            this.Label_ValidationMessage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // ViewPatientProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(801, 584);
+            this.ClientSize = new System.Drawing.Size(801, 587);
+            this.Controls.Add(this.Label_ValidationMessage);
             this.Controls.Add(this.patientIdNumber);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.flowLayoutPanel5);
@@ -452,16 +473,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Label_FirstName;
         private System.Windows.Forms.TextBox firstNameTextBox;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Label_MiddleInitial;
         private System.Windows.Forms.TextBox middleInitialTextBox;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Label_LastName;
         private System.Windows.Forms.TextBox lastNameTextBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Label_ContactNumber;
         private System.Windows.Forms.TextBox contactNumberTextBox;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Label_Gender;
         private System.Windows.Forms.ComboBox genderComboBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker patientBirthday;
@@ -478,5 +499,6 @@
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label patientIdNumber;
+        private System.Windows.Forms.Label Label_ValidationMessage;
     }
 }

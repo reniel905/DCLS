@@ -45,6 +45,7 @@
             this.Button_Entry_Delete = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.Button_Entry_Load = new System.Windows.Forms.Button();
+            this.Label_Birthday = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
@@ -94,6 +95,7 @@
             // 
             // flowLayoutPanel2
             // 
+            this.flowLayoutPanel2.Controls.Add(this.Label_Birthday);
             this.flowLayoutPanel2.Controls.Add(this.filterSearchComboBox);
             this.flowLayoutPanel2.Controls.Add(this.patientSearchTextBox);
             this.flowLayoutPanel2.Controls.Add(this.Button_Entry_Search);
@@ -109,6 +111,7 @@
             "First Name",
             "Last Name",
             "Gender"});
+            this.filterSearchComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.filterSearchComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filterSearchComboBox.FormattingEnabled = true;
             this.filterSearchComboBox.Items.AddRange(new object[] {
@@ -116,17 +119,16 @@
             "Last Name",
             "Id",
             "Gender"});
-            this.filterSearchComboBox.Location = new System.Drawing.Point(2, 2);
+            this.filterSearchComboBox.Location = new System.Drawing.Point(88, 2);
             this.filterSearchComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.filterSearchComboBox.Name = "filterSearchComboBox";
             this.filterSearchComboBox.Size = new System.Drawing.Size(125, 28);
             this.filterSearchComboBox.TabIndex = 2;
-            this.filterSearchComboBox.Text = "Filter by";
             // 
             // patientSearchTextBox
             // 
             this.patientSearchTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientSearchTextBox.Location = new System.Drawing.Point(132, 3);
+            this.patientSearchTextBox.Location = new System.Drawing.Point(218, 3);
             this.patientSearchTextBox.Name = "patientSearchTextBox";
             this.patientSearchTextBox.Size = new System.Drawing.Size(245, 26);
             this.patientSearchTextBox.TabIndex = 0;
@@ -136,7 +138,7 @@
             this.Button_Entry_Search.BackgroundImage = global::DCLS.Properties.Resources.search;
             this.Button_Entry_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Button_Entry_Search.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.Button_Entry_Search.Location = new System.Drawing.Point(383, 3);
+            this.Button_Entry_Search.Location = new System.Drawing.Point(469, 3);
             this.Button_Entry_Search.Name = "Button_Entry_Search";
             this.Button_Entry_Search.Size = new System.Drawing.Size(28, 28);
             this.Button_Entry_Search.TabIndex = 1;
@@ -174,6 +176,7 @@
             this.searchPatientDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.searchPatientDataGridView.Size = new System.Drawing.Size(775, 317);
             this.searchPatientDataGridView.TabIndex = 5;
+            this.searchPatientDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.searchPatientDataGridView_CellClick);
             // 
             // Control_Bar
             // 
@@ -236,6 +239,16 @@
             this.Button_Entry_Load.UseVisualStyleBackColor = true;
             this.Button_Entry_Load.Click += new System.EventHandler(this.Button_Entry_Load_Click);
             // 
+            // Label_Birthday
+            // 
+            this.Label_Birthday.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.Label_Birthday.Location = new System.Drawing.Point(3, 0);
+            this.Label_Birthday.Name = "Label_Birthday";
+            this.Label_Birthday.Size = new System.Drawing.Size(80, 26);
+            this.Label_Birthday.TabIndex = 5;
+            this.Label_Birthday.Text = "Filter:";
+            this.Label_Birthday.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // SearchPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,5 +292,6 @@
         private System.Windows.Forms.Button refreshButton;
         private System.Windows.Forms.ComboBox filterSearchComboBox;
         private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Label Label_Birthday;
     }
 }

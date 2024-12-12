@@ -12,14 +12,18 @@ namespace DCLS
 {
     public partial class SearchPatient : Form
     {
+        public Boolean Cell_Passing_isLocked = true;
+        public NewLog Window_Reference_NewLog;
         public SearchPatient()
         {
             InitializeComponent();
+            Cell_Passing_isLocked = true;
         }
 
         public SearchPatient(string Setting)
         {
             InitializeComponent();
+            Cell_Passing_isLocked = false;
             this.StartPosition = FormStartPosition.Manual;
             this.ControlBox = false;
             if (Setting == "Remove_Control_Bar")
@@ -65,7 +69,7 @@ namespace DCLS
                 string birthday = searchPatientDataGridView.CurrentRow.Cells["birthday"].Value.ToString();
                 string contactNo = searchPatientDataGridView.CurrentRow.Cells["contact_no"].Value.ToString();
                 
-                var Window = new ViewPatientProfile(patientId, firstName, middleInitial, lastName, contactNo, gender, birthday);
+                var Window = new ViewPatientProfile(patientId, firstName, middleInitial, lastName, contactNo, gender, birthday, this);
                 Window.ShowDialog();
             }
             else
@@ -136,6 +140,32 @@ namespace DCLS
             }
 
 
+        }
+
+        private void searchPatientDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (Cell_Passing_isLocked == false && searchPatientDataGridView.CurrentRow != null) // Ensure a row is selected
+            {
+                // Retrieve data from each column
+                string patientId = searchPatientDataGridView.CurrentRow.Cells["patient_id"].Value.ToString();
+
+                if (Window_Reference_NewLog != null)
+                {
+                    Window_Reference_NewLog.idNumberTextBox_SetText(retrievePatientId());
+                }
+            }
+        }
+
+        public string retrievePatientId()
+        {
+            string patientId = searchPatientDataGridView.CurrentRow.Cells["patient_id"].Value.ToString();
+            return patientId;
+        }
+
+        public void setReference_NewLog(NewLog Window)
+        {
+            Window_Reference_NewLog = Window;
         }
     }
 }

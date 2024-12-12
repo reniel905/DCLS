@@ -102,6 +102,7 @@
             // 
             // idNumberTextBox
             // 
+            this.idNumberTextBox.Enabled = false;
             this.idNumberTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idNumberTextBox.Location = new System.Drawing.Point(152, 3);
             this.idNumberTextBox.Name = "idNumberTextBox";

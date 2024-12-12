@@ -106,5 +106,10 @@ namespace DCLS
                 Window_Reference_List.Close();
             }
         }
+
+        public void idNumberTextBox_SetText(string Text)
+        {
+            idNumberTextBox.Text = Text;
+        }
     }
 }

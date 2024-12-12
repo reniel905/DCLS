@@ -36,7 +36,7 @@ namespace DCLS
             string middleInitial = createMiddleInitialTextBox.Text;
             string contact = createContactNumberTextBox.Text;
             string gender = createGenderComboBox.Text;
-            string birthday = createPatientBirthdate.Text;
+            string birthday = createPatientBirthdate.Value.ToString("MM-dd-yyyy");
             string regexPattern = @"^[\d]{7,15}[\s\-]?[\d\s\-]*$";
             Regex regex = new Regex(regexPattern);
             if (!regex.IsMatch(createContactNumberTextBox.Text))
