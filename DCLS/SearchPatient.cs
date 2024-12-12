@@ -167,5 +167,16 @@ namespace DCLS
         {
             Window_Reference_NewLog = Window;
         }
+
+        private void patientSearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (filterSearchComboBox.Text == "Id")
+            {
+                if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true; // Prevent invalid characters
+                }
+            }
+        }
     }
 }

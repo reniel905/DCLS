@@ -14,11 +14,13 @@ namespace DCLS
     {
 
         int logId;
+        private ViewPatientProfile Window_Reference;
 
-        public ViewPatientProfile_Delete_Confirmation(int id)
+        public ViewPatientProfile_Delete_Confirmation(int id, ViewPatientProfile Window = null)
         {
             this.logId = id;
             InitializeComponent();
+            Window_Reference = Window;
         }
 
         private void Button_Close_Click(object sender, EventArgs e)
@@ -32,6 +34,7 @@ namespace DCLS
         {
             AccessDatabase deleteLog = new AccessDatabase(DatabaseQueries.deleteLog(logId));
             deleteLog.executeDatabaseQuery();
+            Window_Reference?.loadPatientHistory();
             Close();
         }
     }

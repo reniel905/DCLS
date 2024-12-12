@@ -34,6 +34,11 @@ namespace DCLS
 
         private void Button_Credits_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             Close();
             var Window = new NewLog(newPatientId);
             Window.ShowDialog();

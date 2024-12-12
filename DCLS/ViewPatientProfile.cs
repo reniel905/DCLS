@@ -52,7 +52,7 @@ namespace DCLS
         }
 
 
-        private void loadPatientHistory()
+        public void loadPatientHistory()
         {
 
             AccessDatabase fetchPatients = new AccessDatabase(DatabaseQueries.getPatientHistory(patientId));
@@ -122,7 +122,7 @@ namespace DCLS
                 // Retrieve data from each column
                 string logId = patientHistoryDataGridView.CurrentRow.Cells["log_id"].Value.ToString();
 
-                var Window = new ViewPatientProfile_Delete_Confirmation(Convert.ToInt32(logId));
+                var Window = new ViewPatientProfile_Delete_Confirmation(Convert.ToInt32(logId), this);
                 Window.ShowDialog();
             }
             else

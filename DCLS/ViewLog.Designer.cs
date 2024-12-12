@@ -56,7 +56,7 @@
             this.flowLayoutPanel1.Controls.Add(this.label1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(687, 76);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(696, 76);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // pictureBox1
@@ -74,7 +74,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(132, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(342, 76);
+            this.label2.Size = new System.Drawing.Size(401, 76);
             this.label2.TabIndex = 2;
             this.label2.Text = "Urban Smiles Dental Clinic";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -82,9 +82,9 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(480, 0);
+            this.label1.Location = new System.Drawing.Point(539, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 76);
+            this.label1.Size = new System.Drawing.Size(150, 76);
             this.label1.TabIndex = 6;
             this.label1.Text = "Recent visits";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -144,7 +144,7 @@
             // Button_AddLog
             // 
             this.Button_AddLog.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.Button_AddLog.Location = new System.Drawing.Point(117, 3);
+            this.Button_AddLog.Location = new System.Drawing.Point(127, 3);
             this.Button_AddLog.Name = "Button_AddLog";
             this.Button_AddLog.Size = new System.Drawing.Size(137, 28);
             this.Button_AddLog.TabIndex = 2;
@@ -157,9 +157,9 @@
             this.flowLayoutPanel2.Controls.Add(this.Button_AddLog);
             this.flowLayoutPanel2.Controls.Add(this.refreshButton);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(435, 94);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(439, 94);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(257, 37);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(267, 37);
             this.flowLayoutPanel2.TabIndex = 10;
             // 
             // refreshButton
@@ -168,7 +168,7 @@
             this.refreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.refreshButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
             this.refreshButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.refreshButton.Location = new System.Drawing.Point(83, 3);
+            this.refreshButton.Location = new System.Drawing.Point(93, 3);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(28, 28);
             this.refreshButton.TabIndex = 4;
@@ -203,7 +203,7 @@
             this.patientLogsDataGridView.Name = "patientLogsDataGridView";
             this.patientLogsDataGridView.ReadOnly = true;
             this.patientLogsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.patientLogsDataGridView.Size = new System.Drawing.Size(679, 317);
+            this.patientLogsDataGridView.Size = new System.Drawing.Size(689, 317);
             this.patientLogsDataGridView.TabIndex = 11;
             // 
             // ViewLog
@@ -211,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(706, 479);
+            this.ClientSize = new System.Drawing.Size(715, 479);
             this.Controls.Add(this.patientLogsDataGridView);
             this.Controls.Add(this.flowLayoutPanel4);
             this.Controls.Add(this.flowLayoutPanel1);

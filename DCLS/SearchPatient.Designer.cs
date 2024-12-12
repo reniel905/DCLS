@@ -36,6 +36,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Label_Birthday = new System.Windows.Forms.Label();
             this.filterSearchComboBox = new System.Windows.Forms.ComboBox();
             this.patientSearchTextBox = new System.Windows.Forms.TextBox();
             this.Button_Entry_Search = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.Button_Entry_Delete = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.Button_Entry_Load = new System.Windows.Forms.Button();
-            this.Label_Birthday = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
@@ -58,7 +58,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(132, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(342, 76);
+            this.label2.Size = new System.Drawing.Size(420, 76);
             this.label2.TabIndex = 2;
             this.label2.Text = "Urban Smiles Dental Clinic";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -86,9 +86,9 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(480, 0);
+            this.label1.Location = new System.Drawing.Point(558, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 76);
+            this.label1.Size = new System.Drawing.Size(213, 76);
             this.label1.TabIndex = 6;
             this.label1.Text = "Search patients";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -103,6 +103,16 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(500, 37);
             this.flowLayoutPanel2.TabIndex = 4;
+            // 
+            // Label_Birthday
+            // 
+            this.Label_Birthday.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.Label_Birthday.Location = new System.Drawing.Point(3, 0);
+            this.Label_Birthday.Name = "Label_Birthday";
+            this.Label_Birthday.Size = new System.Drawing.Size(80, 26);
+            this.Label_Birthday.TabIndex = 5;
+            this.Label_Birthday.Text = "Filter:";
+            this.Label_Birthday.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // filterSearchComboBox
             // 
@@ -127,11 +137,13 @@
             // 
             // patientSearchTextBox
             // 
+            this.patientSearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.patientSearchTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.patientSearchTextBox.Location = new System.Drawing.Point(218, 3);
             this.patientSearchTextBox.Name = "patientSearchTextBox";
             this.patientSearchTextBox.Size = new System.Drawing.Size(245, 26);
             this.patientSearchTextBox.TabIndex = 0;
+            this.patientSearchTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.patientSearchTextBox_KeyPress);
             // 
             // Button_Entry_Search
             // 
@@ -238,16 +250,6 @@
             this.Button_Entry_Load.TabIndex = 1;
             this.Button_Entry_Load.UseVisualStyleBackColor = true;
             this.Button_Entry_Load.Click += new System.EventHandler(this.Button_Entry_Load_Click);
-            // 
-            // Label_Birthday
-            // 
-            this.Label_Birthday.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
-            this.Label_Birthday.Location = new System.Drawing.Point(3, 0);
-            this.Label_Birthday.Name = "Label_Birthday";
-            this.Label_Birthday.Size = new System.Drawing.Size(80, 26);
-            this.Label_Birthday.TabIndex = 5;
-            this.Label_Birthday.Text = "Filter:";
-            this.Label_Birthday.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // SearchPatient
             // 

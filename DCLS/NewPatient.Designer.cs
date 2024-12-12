@@ -81,7 +81,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(132, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(342, 76);
+            this.label2.Size = new System.Drawing.Size(401, 76);
             this.label2.TabIndex = 2;
             this.label2.Text = "Urban Smiles Dental Clinic";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -89,9 +89,9 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(480, 0);
+            this.label1.Location = new System.Drawing.Point(539, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 76);
+            this.label1.Size = new System.Drawing.Size(232, 76);
             this.label1.TabIndex = 6;
             this.label1.Text = "Add new patient";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
