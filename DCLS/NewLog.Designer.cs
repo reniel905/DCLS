@@ -167,6 +167,7 @@
             // 
             // Button_AddToLog
             // 
+            this.Button_AddToLog.Enabled = false;
             this.Button_AddToLog.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
             this.Button_AddToLog.Location = new System.Drawing.Point(231, 216);
             this.Button_AddToLog.Name = "Button_AddToLog";
